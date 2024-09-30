@@ -18,7 +18,7 @@ const QuizListData = () => {
   }, []);
 
   return (
-    <div>
+    <div className='quizcontainer'>
       {quizzes.map((quiz) => (
         <div key={quiz._id}>
         

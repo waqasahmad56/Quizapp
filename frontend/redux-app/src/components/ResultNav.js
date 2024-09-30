@@ -7,7 +7,7 @@ import ResultPage from './ResultPage';
 
 const ResultNav = () => {
     const navigate = useNavigate();
-
+   
   return (
     <div>
          <div className='border bg-dark text-white p-4 text-center fs-5'>

@@ -15,7 +15,9 @@ import Profile from './components/Profile';
 import Quizzes from './components/Quizzes'; 
 import QuestionPage from './components/QuestionPage';
 import TestForm from './components/TestForm';
-import ResultPage from './components/ResultPage';
+import ResultNav from './components/ResultNav';
+import Report from './components/Report';
+
 
 
 const ProtectedRoute = ({ children }) => {
@@ -39,7 +41,9 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgetPassword />} />
-                <Route path="/resultpage" element={<ResultPage />} />
+                <Route path="/resultpage" element={<ResultNav/>} />
+                <Route path="/reports" element={<Report/>} />
+
                 
 
 

@@ -70,12 +70,12 @@ function Signup() {
             </div>
 
             <div className="mb-3">
-              <label className="form-check-label text-white me-3">
-                <input type="radio" className="form-check-input me-1" value="student" checked={role === 'student'} onChange={() => setRole('student')} />
-                Student
+              <label className="form-check-label text-white me-4 mx-4">
+                <input type="radio" className="form-check-input  me-3" value="student" checked={role === 'student'} onChange={() => setRole('student')} />
+                      Student
               </label>
               <label className="form-check-label text-white">
-                <input type="radio" className="form-check-input me-1" value="admin" checked={role === 'admin'} onChange={() => setRole('admin')} />
+                <input type="radio" className="form-check-input " value="admin" checked={role === 'admin'} onChange={() => setRole('admin')} />
                 Admin
               </label>
             </div>

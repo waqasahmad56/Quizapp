@@ -80,12 +80,12 @@ const UserManagement = () => {
   };
 
   return (
-    <div className="container mt-2 ">
+    <div className="container mt-2  ">
       <h1 className="mb-4 d-flex justify-content-center ">User Management</h1>
       {loading && <div className="alert alert-info">Loading...</div>}
       {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={handleSubmit} className="mb-4">
-        <div className="form-row">
+        <div className="form">
           <div className="col mt-3">
             <input
               type="text"

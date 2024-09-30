@@ -21,8 +21,8 @@ const StudentPortal = () => {
     };
 
     return (
-        <div className="container mt-2 w-100 ">
-            <div className="header text-center bg-primary text-white p-4">
+        <div className="container w-100 studentport">
+            <div className="header text-center bg-primary text-white p-4 ">
                 <h1>Welcome to the Student Portal</h1>
             </div>
             <div className="content p-4 bg-light rounded shadow">

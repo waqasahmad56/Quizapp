@@ -6,7 +6,8 @@ import StudentPortal from './StudentPortal';
 
 const Navbars = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
+        // <div className=''>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3 shadow-sm position-fixed w-100 z-3">
             <div className="container d-flex justify-content-center">
                 <button
                     className="navbar-toggler"
@@ -40,6 +41,7 @@ const Navbars = () => {
                 </div>
             </div>
         </nav>
+        // </div>
     );
 };
 

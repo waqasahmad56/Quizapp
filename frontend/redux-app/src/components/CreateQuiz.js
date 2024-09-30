@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -58,7 +59,7 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div className="container mt-4  bg-light w-75 h-100 rounded-3 shadow-lg " style={{ marginLeft: '300px' }}>
+    <div className="container quizcontainer bg-light w-75 h-100 rounded-3 shadow-lg " style={{ marginLeft: '270px' }}>
       <h1 className="text-center mb-4 text-dark">Create a New Quiz</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">

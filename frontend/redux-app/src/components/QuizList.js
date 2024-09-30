@@ -29,7 +29,7 @@ const QuizList = () => {
   };
 
   return (
-    <div>
+    <div className='quizcontainer'>
       {quizzes.map((quiz) => (
         <div key={quiz._id}>
           <UpdateQuiz quiz={quiz} onUpdate={handleUpdateQuiz} />

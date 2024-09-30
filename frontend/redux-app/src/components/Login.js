@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../features/auth/authAPI';
@@ -28,7 +29,7 @@ function Login() {
   
   return (
                             // linear-gradient(to bottom, #076E7A,
-                            <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 "  style={{ background:' white'  }}>
+                            <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100 image"  style={{ background:' '  }}>
                             <div className="row shadow-lg rounded-3 p-5" style={{ backgroundColor: '#25797d', maxWidth: '1000px', width: '100%' }}>
                              
                              <div className='d-flex gap-4'>
