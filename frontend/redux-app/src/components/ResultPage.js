@@ -23,7 +23,7 @@ const ResultPage = () => {
     <>
       <div className="container d-flex justify-content-center  mytable">
         <div className="">
-          <h2 className="text-center mb-1 border bg-primary text-white p-4 shadow">Results Table</h2>
+          <h2 className="text-center mb-1 border bg-primary text-white p-4 shadow">Simple Quiz Results Table</h2>
           <table className="table table-bordered table-hover table-striped text-center shadow ">      
             <thead className="table-primary">
               <tr>

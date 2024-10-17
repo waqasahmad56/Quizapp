@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
+import RecordPage from './RecordPage';
 
 const MainNav = ({ message }) => {
   const [activeTab, setActiveTab] = useState('dashboard');
 
   return (
-    <div>
-      <ul className="nav nav-pills mb-3 bg-dark text-white p-4 d-flex justify-content-center gap-3 position-fixed z-3 w-100" id="pills-tab" role="tablist">
+    <div style={{ fontFamily: 'Tahoma Verdana sans-serif' }}>
+      <ul className="nav nav-pills mb-3 bg-dark text-white p-4 d-flex justify-content-center gap-3 position-fixed z-3 w-100"
+        id="pills-tab" role="tablist">
         <li className="nav-item" role="presentation">
           <button
             className={`nav-link ${activeTab === 'dashboard' ? 'active' : ''} text-white`}
@@ -70,7 +72,7 @@ const MainNav = ({ message }) => {
         </div>
 
         <div className={`tab-pane fade ${activeTab === 'questions' ? 'show active' : ''}`} id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0"></div>
-        <div className={`tab-pane fade ${activeTab === 'contacts' ? 'show active' : ''}`} id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabIndex="0"></div>
+        <div className={`tab-pane fade ${activeTab === 'contacts' ? 'show active' : ''}`} id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabIndex="0"><RecordPage/></div>
       </div>
     </div>
   );

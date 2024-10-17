@@ -1,0 +1,48 @@
+.logo {
+    height: 30px; 
+    margin-left: 50px;
+  }
+  
+  .circle {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: lightblue;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-weight: bold; 
+    margin-right: 180px; 
+  }
+  
+   
+  .navbar-nav2 {
+    flex-direction: row; 
+    gap: 120px;
+    list-style-type: none;
+  } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../App.css'
 
 const CreateQuiz = () => {
   const [quizTitle, setQuizTitle] = useState('');
@@ -59,14 +59,14 @@ const CreateQuiz = () => {
   };
 
   return (
-    <div className="container quizcontainer bg-light w-75 h-100 rounded-3 shadow-lg " style={{ marginLeft: '270px' }}>
+    <div className="container quizcontainer topnav w-75 h-100 rounded-3 shadow-sm " style={{ marginLeft: '270px' }}>
       <h1 className="text-center mb-4 text-dark">Create a New Quiz</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label className="form-label text-dark">Quiz Title:</label>
+          <label className="form-label text-dark ">Quiz Title:</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control formselect"
             value={quizTitle}
             onChange={handleQuizTitleChange}
             required
@@ -79,7 +79,7 @@ const CreateQuiz = () => {
           <div className="mb-3">
             <input
               type="text"
-              className="form-control"
+              className="form-control formselect"
               placeholder="Enter Question"
               value={question.questionText}
               onChange={handleQuestionChange}
@@ -92,7 +92,7 @@ const CreateQuiz = () => {
               <div key={oIndex} className="col-3">
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control formselect"
                   placeholder={`Option ${oIndex + 1}`}
                   value={option}
                   onChange={(e) => handleOptionChange(oIndex, e)}
@@ -103,10 +103,10 @@ const CreateQuiz = () => {
           </div>
           
           <div className="mb-3">
-            <label className="form-label">Correct Answer:</label>
+            <label className="form-label ">Correct Answer:</label>
             <input
               type="text"
-              className="form-control"
+              className="form-control formselect"
               placeholder="Enter Correct Answer"
               value={question.correctAnswer}
               onChange={handleCorrectAnswerChange}

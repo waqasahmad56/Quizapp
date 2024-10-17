@@ -9,6 +9,7 @@
     height: 360px;
     margin-top: 55px;
     
+    
 }
 .box2{
   margin-top: 50px;
@@ -20,12 +21,12 @@
 .link-hover{
   color: black;
 }
-.iconSize{
-  width: 400px;
-  height:60px;
-  margin-left: 2px;
-  color: white;
-}
+ .iconSize{
+  width: 70px;
+  height:70px; 
+  margin-left: 50px;
+  color: aqua; 
+} 
 
 .nav-pills .nav-link:hover {
   /* background-color: green;  */
@@ -58,6 +59,7 @@
  .myicon{
   margin-left: 5px;
   gap:180px;
+  
  }
 
 
@@ -86,13 +88,20 @@
 }
 .mytable{
   width: 1230px;
-  margin-left: 250px;
-  margin-top: 130px;
+  margin-left: 160px;
+  margin-top: 70px;
+
+}
+.mytable2{
+  width: 1270px;
+  margin-left: 160px;
+  /* margin-top: 430px;  */
 
 }
 .mybutton:disabled{
   display: none;
 }
+
 .myquiz{
   margin-left: 260px;
 }
@@ -100,27 +109,28 @@
   margin-left: 270px;
   margin-top: 130px;
 }
+
 .quizcontainer{
   margin-top: 130px;
-}
+} 
 .studentport{
   padding: 5%;
 }
 
-
+/* 
 .option-card {
   transition: transform 0.2s;
 }
 
 .option-card:hover {
   transform: scale(1.05);
-}
+} 
 
 .animate__animated {
   opacity: 3;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-}
+} */
 
 
 .sidebar {
@@ -138,13 +148,126 @@
 .sidebar.visible {
   transform: translateX(0);
 }
-/* 
-.image {
-  background-image: url('https://www.miracle-ear.com/content/dam/amplifon-america/us/store-detail/partner-portal/event-background/blue_swirl.jpg/jcr:content/renditions/cq5dam.web.320.320.jpeg');
-  background-size: cover; 
-  width: 100%;  
-  opacity: 1.5;
-  
-}  */
+.main-content{
+  margin-left: 270px;
+}
+ .myinfo{
+  margin-left: 220px;
+  margin-top: 50px;
+} 
+.profile-section{
+  margin-left: 210px;
+}
 
+.profile-info{
+  margin-left: 220px;
+} 
+.btn-custom {
+  width: auto; 
+  border-radius: 0; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+  margin-right: 27px;
+
+}
+.profilepara{
+  margin-right: 100px;
+}
+.questioncontainer{
+  width: 900px;
+}
+.mydataquiz{
+  margin-top: 100px;
+  margin-left: 80px;
+}
+.pagination-button:disabled{
+  display: none;
+}
+
+.mylist{
+  width: 470px;
+  margin-top: 42px;
+  gap: 10px;
+  background-color: #ddd;
+}
+.myform2{
+  margin-left: -250px;
+  margin-top: 40px;
+  background-color: #ddd;
+}
+.form-select {
+  border: none !important; 
+  box-shadow: none !important; 
+}
+.formselect{
+  border: none !important; 
+  box-shadow: none !important; 
+  
+}
+.questions-container {
+  min-height: 525px; 
+}
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  /* background-color: #333; */
+  background-color: #ddd;
+
+  padding: 0 30px; 
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.topnav .logo {
+  height: 30px; /* Adjust logo height as needed */
+  margin-right: 20px; /* Space between logo and nav links */
+}
+
+.nav-links {
+  display: flex;
+  /* justify-content: center; */
+  margin-left: -250px;
+  flex-grow: 1; /* Allows the links to occupy available space */
+}
+
+.topnav .nav-link {
+  /* color: #f2f2f2; */
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .nav-link:hover {
+  /* background-color: #ddd; */
+  background-color: gray;
+  color:white;
+}
+.custom-profile{
+   margin-right: 310px;
+  
+}
+.custom-testportal{
+  margin-left: 480px;
+}
+.custom-quiz{
+  margin-left: -170px;
+}
+/* 
+.topnav .nav-link.active {
+  background-color: #04AA6D;
+  color: white;
+  
+} */
 

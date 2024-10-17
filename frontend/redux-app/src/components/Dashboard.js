@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 import '../App.css';
 import MainNav from './MainNav';
+import ChatBox from './ChatBox';
 
 function Dashboard() {
   const token = useSelector((state) => state.auth.token);
@@ -27,6 +28,7 @@ function Dashboard() {
   return (
     <>
       <MainNav message={message} />
+      <ChatBox/>
     </>
   );
 }

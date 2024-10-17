@@ -1,0 +1,29 @@
+.table td {
+  vertical-align: middle; 
+}
+
+.card {
+  margin-bottom: 20px; 
+}
+
+.card-title {
+  margin-bottom: 15px; 
+}
+.mytable4{
+  margin-left: -280px;
+}
+.mytable5{
+  margin-left: -530px;
+  margin-top: 180px;
+}
+
+
+.Tooltip {
+  background-color: #333; 
+  color: #fff; 
+  padding: 8px;
+  border-radius: 4px; 
+  font-size: 12px; 
+}
+
+

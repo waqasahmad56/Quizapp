@@ -50,11 +50,11 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
 
   return (
     <div className="container-fluid mycontainer">
-      <div className="container mt-1 w-75 myquiz bg-light">
+      <div className="container mt-1 w-75 myquiz ">
         {!isEditing ? (
           <>
             {quiz.questions.map((question, qIndex) => (
-              <div key={question._id} className="quiz-card mb-3 p-2 border rounded shadow">
+              <div key={question._id} className="quiz-card mb-3 p-2 border rounded shadow-sm topnav">
                 <p className="font-weight-bold fs-5">Question: {question.questionText}</p>
                 <div className="d-flex flex-wrap gap-2">
                   {question.options.map((option, optIndex) => (
@@ -73,12 +73,12 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
           </>
         ) : (
           <form onSubmit={handleSubmit} className="mt-4">
-            <div className="quiz-card mb-4 p-3 border rounded shadow">
+            <div className="quiz-card mb-4 p-3 border rounded shadow-sm topnav">
               <div className="mb-3">
                 <label className="form-label text-dark">Quiz Title:</label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control formselect"
                   value={updatedQuiz.title}
                   onChange={handleTitleChange}
                   required
@@ -91,7 +91,7 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
                   <div className="mb-3">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control formselect"
                       placeholder="Enter Question"
                       value={question.questionText}
                       onChange={(e) => handleQuestionChange(qIndex, e)}
@@ -103,7 +103,7 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
                       <div key={option._id} className="col-3">
                         <input
                           type="text"
-                          className="form-control"
+                          className="form-control formselect"
                           placeholder={`Option ${optIndex + 1}`}
                           value={option.optionText}
                           onChange={(e) => handleOptionChange(qIndex, optIndex, e)}
@@ -116,7 +116,7 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
                     <label className="form-label">Correct Answer:</label>
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control formselect"
                       placeholder="Enter Correct Answer"
                       value={question.correctAnswer}
                       onChange={(e) => handleCorrectAnswerChange(qIndex, e)}
@@ -126,7 +126,7 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
                   <div className="mb-3">
                     <label className="form-label">Difficulty:</label>
                     <select
-                      className="form-control"
+                      className="form-control formselect"
                       value={question.difficulty}
                       onChange={(e) => handleDifficultyChange(qIndex, e)}
                       required

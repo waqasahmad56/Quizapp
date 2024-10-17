@@ -5,11 +5,15 @@ import User from '../models/User.js';
 import Quiz from '../models/Quiz.js';
 import Profile from '../models/Profile.js';
 import Result from '../models/Result.js';
+import Quizz from '../models/Quizz.js';
+import Record from '../models/Record.js';
+
 import dotenv from 'dotenv';
 import crypto from 'crypto';
 import nodemailer from 'nodemailer';
 import multer from 'multer';
 import path from 'path';
+
 
 dotenv.config();
 
@@ -366,6 +370,117 @@ router.get('/resultss', async (req, res) => {
   } catch (error) {
     console.error('Error fetching results:', error);
     res.status(500).json({ message: 'Failed to fetch results' });
+  }
+});
+
+
+router.post('/quizques', async (req, res) => {
+  const { title, questions } = req.body;
+
+  
+  if (!title || !Array.isArray(questions) || questions.length === 0) {
+    return res.status(400).json({ error: 'Title and questions are required.' });
+  }
+
+  
+  for (const question of questions) {
+    const { questionParagraph, options, correctAnswer, difficulty } = question;
+    
+    if (!questionParagraph || !Array.isArray(options) || options.length !== 4 || 
+        !correctAnswer || !difficulty) {
+      return res.status(400).json({ error: 'Each question must have a paragraph, 4 options, correct answer, and difficulty.' });
+    }
+  }
+
+  try {
+    const newQuizz = new Quizz({
+      title,
+      questions
+    });
+
+    await newQuizz.save();
+    res.status(201).json({ message: 'Quiz created successfully', quiz: newQuizz });
+  } catch (error) {
+    res.status(500).json({ error: 'Error saving quiz: ' + error.message });
+  }
+});
+router.get('/quizques', async (req, res) => {
+  try {
+    const quizzes = await Quizz.find(); 
+    res.status(200).json(quizzes);
+  } catch (error) {
+    res.status(500).json({ error: 'Error fetching quizzes: ' + error.message });
+  }
+});
+
+
+router.post('/savequizresult', async (req, res) => {
+  
+  const {
+    quizId,
+    studentId,
+    startTime,
+    endTime,
+    timeSpent,
+    totalQuestions,
+    correctAnswers,
+    incorrectAnswers,
+    percentage,
+    status,
+    questionTimes,
+    correctAnswersList,
+
+  } = req.body;
+
+   if (!quizId || !studentId || !startTime || !endTime || totalQuestions === undefined || 
+       correctAnswers === undefined || incorrectAnswers === undefined) {
+     return res.status(400).json({ error: 'All fields are required.' });
+   }
+
+  
+  try {
+    const newRecord = new Record({
+      quizId,
+      studentId,
+      startTime,
+      endTime,
+      timeSpent,
+      totalQuestions,
+      correctAnswers,
+      incorrectAnswers,
+      percentage,
+      status,
+      questionTimes,
+      correctAnswersList
+    
+    });
+  
+    await newRecord.save();
+    res.status(201).json({ message: 'Quiz result saved successfully', record: newRecord });
+  } catch (error) {
+    res.status(500).json({ error: 'Error saving quiz result: ' + error.message });
+  }
+});
+
+router.get('/results', async (req, res) => {
+  try {
+    const results = await Record.find({ });
+    res.status(200).json(results);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+router.get('/student/:email', async (req, res) => {
+  try {
+      const student = await User.findOne({ email: req.params.email });
+      if (!student) {
+          return res.status(404).json({ message: 'Student not found' });
+      }
+      res.json(student);
+  } catch (error) {
+      res.status(500).json({ message: 'Server error' });
   }
 });
 

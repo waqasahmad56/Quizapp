@@ -1,4 +1,4 @@
-// src/features/users/usersSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const usersSlice = createSlice({

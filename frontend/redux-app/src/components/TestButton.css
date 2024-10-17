@@ -1,0 +1,35 @@
+.mybutton-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  */
+    margin-top: 170px;
+  }
+  
+  .mycircle-button {
+    width: 150px; 
+    height: 150px;
+    border: none;
+    border-radius: 50%;
+    /* background-color: #007bff;  */
+    background-color:rgba(32, 178, 171, 0.984); 
+
+    color: white; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+  }
+  
+  .mycircle-button:hover {
+    background-color: lightseagreen; 
+    transform: scale(1.05);
+  }
+  
+  .mycircle-button:active {
+    transform: scale(0.95); 
+  }
+  .random-content{
+    padding: 70px;
+
+  }

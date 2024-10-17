@@ -1,0 +1,154 @@
+  .circle-option {
+  display: flex; 
+  padding: 15px; 
+  justify-content: center;  
+  align-items: center;  
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  border: 2px solid white; 
+  /* box-shadow: 44px; */
+  /* background-color: white; */
+   background-color: rgba(45, 117, 91, 0.667);   
+  margin-right: 10px;  
+  cursor: pointer;  
+  transition: background-color 0.3s, color 0.3s; 
+  font-size: 18px; 
+  text-align: center;
+} 
+
+.circle-option.selected {
+  background-color: #00ffa67c; 
+} 
+  
+.form-check-input2 {
+  display: none; 
+}       
+
+.container-fluid.question-container {
+  background-color: #f7f9fc;  
+
+  padding: 100px;
+  font-family: Arial, sans-serif;
+  /* margin-top: 90px; */
+}
+
+.text-section {
+  padding: 20px;
+  font-size: 16px;
+  color: #333; 
+  border-right: 2px solid #e9e9e9; 
+  
+}
+
+.options-section {
+  padding: 20px;
+}
+
+.option-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+
+}  
+ 
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+} 
+
+ .option-label {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+} 
+
+.option-text {
+  margin-left: 10px;
+} 
+
+.pagination{
+
+  
+  background-color: #f7f9fc;
+  padding: 75px; 
+
+
+ } 
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: dodgerblue;  
+
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.pagination button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  /* background-color:rgba(248, 248, 255, 0.468); */ 
+  cursor: pointer;
+  
+}
+
+.pagination button.active {
+  
+  background-color: #00ffa67c; 
+
+  color: white;
+}
+.button-disb:disabled{
+  display: none;
+}
+.mytimer{
+  width: 140px;
+  text-wrap: nowrap;
+  margin-top: -40px;
+  margin-left: 1080px;
+}
+
+
+.pagination2{
+
+  
+  /* background-color: #f7f9fc;   */
+  padding: 7px; 
+
+
+ } 
+
+.pagination2 a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+.pagination2 button {
+  margin: 5px;
+  padding: 10px;
+  border:none;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.pagination2 button.active {
+  
+  background-color: #00ffa67c; 
+
+  color: white;
+}
+

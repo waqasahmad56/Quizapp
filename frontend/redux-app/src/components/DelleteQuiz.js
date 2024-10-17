@@ -32,7 +32,7 @@ const DelleteQuiz = () => {
   };
 
   return (
-    <div className="container quizcontainer w-75 h-auto rounded-3 bg-light shadow-lg animate__animated animate__fadeIn " style={{ marginLeft: '270px', marginRight: 'auto' }}>
+    <div className="container quizcontainer w-75 h-auto rounded-3 topnav shadow-sm animate__animated animate__fadeIn " style={{ marginLeft: '270px', marginRight: 'auto' }}>
       {/* <h5 className="text-center mb-4 text-primary">Delete a Quiz</h5> */}
       {quizzes.length > 0 ? (
         quizzes.map((quiz) => (
