@@ -74,13 +74,14 @@ function Sidebar() {
 
   return (
     <div className="d-flex position-relative">
-      <div className={`sidebar position-fixed bg-dark text-white p-3 ${isVisible ? 'visible' : 'hidden'}`} style={{
+      <div className={`sidebar position-fixed bg-dark text-white p-3 `} style={{
+                                                                    // ${isVisible ? 'visible' : 'hidden'}
         width: '250px',
         height: '100%',
         top: '90px', 
         left: 0,
-        transition: 'transform 0.3s ease',
-        transform: isVisible ? 'translateX(0)' : 'translateX(-100%)'
+        // transition: 'transform 0.3s ease',
+        // transform: isVisible ? 'translateX(0)' : 'translateX(-100%)'
       }}>
         <div className="mb-4">
           <h2 className="text-white">Admin Panel</h2>

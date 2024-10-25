@@ -16,7 +16,7 @@ const RecordNav = () => {
 
   return (
     <nav className="navbar navbar-light topnav d-flex justify-content-between align-items-center shadow-sm ">
-          <button className="btn   position-absolute start-0 mx-2 fs-5" onClick={() => navigate('/homepage')}>
+          <button className="btn   position-absolute start-0 mx-2 fs-5" onClick={() => navigate('/home')}>
           {/* <FontAwesomeIcon icon={faBackward} /> */}
           <FontAwesomeIcon icon={faAngleLeft} />
 

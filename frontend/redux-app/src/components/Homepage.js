@@ -20,7 +20,7 @@ const Navbars = () => {
                 <Link className={`nav-link ${location.pathname === '/profile' ? 'active' : ''}`} to="/profile">Profile</Link>
                 <Link className={`nav-link ${location.pathname === '/quiz' ? 'active' : ''}`} to="/quiz">Quiz</Link>
                 <Link className={`nav-link ${location.pathname === '/test' ? 'active' : ''}`} to="/test">Test Portal</Link>
-                <Link className={`nav-link ${location.pathname === '/recordpage' ? 'active' : ''}`} to="/recordpage">Reports</Link>
+                {/* <Link className={`nav-link ${location.pathname === '/recordpage' ? 'active' : ''}`} to="/recordpage">Reports</Link> */}
             </div>
         </div>
         </>

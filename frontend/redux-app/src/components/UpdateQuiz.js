@@ -31,7 +31,7 @@ const UpdateQuiz = ({ quiz, onUpdate }) => {
     updatedQuestions[qIndex].correctAnswer = event.target.value;
     setUpdatedQuiz({ ...updatedQuiz, questions: updatedQuestions });
   };
-
+ 
   const handleDifficultyChange = (qIndex, event) => {
     const updatedQuestions = [...updatedQuiz.questions];
     updatedQuestions[qIndex].difficulty = event.target.value;

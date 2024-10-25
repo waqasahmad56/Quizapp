@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import RecordPage from './RecordPage';
+import Notification from './Notification';
 
-const MainNav = ({ message }) => {
+
+const MainNav = ({ message}) => {
   const [activeTab, setActiveTab] = useState('dashboard');
 
   return (
@@ -22,7 +24,7 @@ const MainNav = ({ message }) => {
             Dashboard
           </button>
         </li>
-         {/* <li className="nav-item" role="presentation">
+          {/* <li className="nav-item" role="presentation">
           <button
             className={`nav-link ${activeTab === 'profile' ? 'active' : ''} text-white`}
             id="pills-profile-tab"
@@ -34,20 +36,20 @@ const MainNav = ({ message }) => {
           >
             Profile
           </button>
-        </li>
+        </li> */}
         <li className="nav-item" role="presentation">
           <button
-            className={`nav-link ${activeTab === 'questions' ? 'active' : ''} text-white`}
+           className={`nav-link ${activeTab === 'questions' ? 'active' : ''} text-white`}
             id="pills-contact-tab"
             onClick={() => setActiveTab('questions')}
-            type="button"
-            role="tab"
-            aria-controls="pills-contact"
-            aria-selected={activeTab === 'questions'}
-          >
-            Quiz Questions
-          </button>
-        </li> */}
+             type="button"
+             role="tab"
+             aria-controls="pills-contact"
+             aria-selected={activeTab === 'questions'}
+           >
+            Notification
+           </button>
+         </li> 
          <li className="nav-item" role="presentation">
            <button
              className={`nav-link ${activeTab === 'contacts' ? 'active' : ''} text-white`}
@@ -71,7 +73,7 @@ const MainNav = ({ message }) => {
           <div className='text-dark'>{message}</div>
         </div>
 
-        <div className={`tab-pane fade ${activeTab === 'questions' ? 'show active' : ''}`} id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0"></div>
+        <div className={`tab-pane fade   ${activeTab === 'questions' ? 'show active' : ''}`} id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabIndex="0"><Notification/></div>
         <div className={`tab-pane fade ${activeTab === 'contacts' ? 'show active' : ''}`} id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabIndex="0"><RecordPage/></div>
       </div>
     </div>

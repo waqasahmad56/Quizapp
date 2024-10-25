@@ -7,7 +7,6 @@ import Profile from '../models/Profile.js';
 import Result from '../models/Result.js';
 import Quizz from '../models/Quizz.js';
 import Record from '../models/Record.js';
-
 import dotenv from 'dotenv';
 import crypto from 'crypto';
 import nodemailer from 'nodemailer';
@@ -176,10 +175,13 @@ router.post('/create-quiz', async (req, res) => {
       difficulty: question.difficulty 
     }))
   });
-
+ 
   try {
     const savedQuiz = await newQuiz.save(); 
+
     res.status(201).json({ message: 'Quiz created successfully', quiz: savedQuiz });
+    
+   
   } catch (error) {
     res.status(500).json({ message: 'Failed to create quiz', error: error.message });
   }
@@ -413,7 +415,6 @@ router.get('/quizques', async (req, res) => {
   }
 });
 
-
 router.post('/savequizresult', async (req, res) => {
   
   const {
@@ -437,7 +438,6 @@ router.post('/savequizresult', async (req, res) => {
      return res.status(400).json({ error: 'All fields are required.' });
    }
 
-  
   try {
     const newRecord = new Record({
       quizId,
